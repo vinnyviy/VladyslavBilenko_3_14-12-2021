@@ -525,4 +525,31 @@ ul li a {
   100% {
     transform: rotate(-360deg);
   }
+}
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99E2D0;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  -webkit-animation: disappear 200ms 3s forwards;
+          animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+
+@-webkit-keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
 }/*# sourceMappingURL=styles.css.map */
