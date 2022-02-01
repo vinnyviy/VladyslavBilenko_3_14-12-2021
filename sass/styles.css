@@ -1,0 +1,528 @@
+body {
+  font-family: "roboto", sans-serif;
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+header {
+  font-family: "Shrikhand", sans-serif;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.1rem;
+  margin: 0;
+  position: relative;
+}
+
+.ville {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #e4e2e2;
+  text-align: center;
+  padding: 0.5rem;
+}
+.ville i {
+  font-size: 1.5rem;
+}
+.ville h2 {
+  font-size: 1rem;
+}
+
+.explorer {
+  background-color: #f6f6f6;
+  padding: 12px 0 70px 0;
+  text-align: center;
+}
+.explorer p {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+
+button {
+  border-radius: 30px;
+  padding: 17px;
+  border: none;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  transition: opacity 250ms;
+}
+button:hover {
+  box-shadow: 5px 5px 10px #8f8d8d;
+  opacity: 0.8;
+}
+
+#section_fonctionnement {
+  padding-left: 7%;
+  padding-right: 7%;
+  margin-bottom: 10%;
+}
+#section_fonctionnement h2 {
+  padding: 20px 0 5px 2px;
+}
+@media screen and (min-width: 1024px) {
+  #section_fonctionnement h2 {
+    text-align: center;
+    padding: 20px 0 5px 0;
+  }
+}
+#section_fonctionnement div {
+  margin-left: 3%;
+}
+@media (min-width: 1024px) {
+  #section_fonctionnement div {
+    display: flex;
+    justify-content: space-between;
+  }
+  #section_fonctionnement div p {
+    width: 30%;
+  }
+}
+#section_fonctionnement div p {
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  transition: background-color 0.5s;
+}
+#section_fonctionnement div p:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+#section_fonctionnement div p:hover i {
+  color: #9356DC;
+}
+#section_fonctionnement div p .number {
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  background-color: #9356DC;
+  color: white;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+#section_fonctionnement div p i {
+  margin-right: 2%;
+  color: #747474;
+  transition: color 0.5s;
+}
+#section_fonctionnement div p #mobile {
+  margin-right: 0.1rem;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+}
+.restaurants__h2 {
+  padding: 40px 0 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__h2 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 0 0;
+  }
+}
+.restaurants article {
+  border-radius: 20px;
+  background-color: white;
+  margin: 15px;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  position: relative;
+}
+.restaurants article img {
+  max-height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants a {
+  color: black;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  article {
+    width: 40%;
+  }
+}
+.restaurants__titre h4 {
+  margin: 0;
+  padding: 10px 0 2px 12px;
+}
+.restaurants__titre p {
+  margin: 0;
+  padding: 0 0 10px 12px;
+}
+
+.restaurants__nouveau {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #0a8d6d;
+  top: 15px;
+  right: 10px;
+  height: 30px;
+  width: 80px;
+  border-radius: 2px;
+}
+.restaurants__nouveau p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.restaurants__coeur {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 20px;
+  bottom: 20px;
+}
+
+.fill {
+  color: black;
+  cursor: pointer;
+}
+.fill:hover {
+  -webkit-animation: fill 0.4s ease-in-out;
+          animation: fill 0.4s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer {
+  background-color: #353535;
+  padding: 25px;
+  color: white;
+}
+
+h5 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 5px 0 5px 0;
+}
+ul li a {
+  color: white;
+}
+
+.fa-utensils {
+  margin-right: 12px;
+}
+
+.fa-hands-helping {
+  margin-right: 5px;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  left: 20px;
+}
+
+#section1 {
+  position: relative;
+}
+#section1 img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#section1 div {
+  width: 86%;
+  display: flex;
+  align-items: center;
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: -30px;
+  position: absolute;
+  top: 260px;
+  justify-content: space-between;
+}
+#section1 h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+#section2, #section3, #section4 {
+  background-color: #f6f6f6;
+  margin-top: -20px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 10px;
+}
+#section2 h3, #section3 h3, #section4 h3 {
+  font-weight: normal;
+  border-bottom: 3px solid #99E2D0;
+  width: 3rem;
+  padding-top: 10px;
+  color: black;
+}
+#section2 article, #section3 article, #section4 article {
+  background-color: white;
+  border-radius: 20px;
+  padding-left: 2.5%;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 10px #d4d4d4;
+  overflow-x: hidden;
+}
+#section2 article a, #section3 article a, #section4 article a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#section2 article a .food, #section3 article a .food, #section4 article a .food {
+  width: 100%;
+  transition: width 0.5s;
+}
+#section2 article a .food h4, #section3 article a .food h4, #section4 article a .food h4 {
+  font-size: 0.9em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#section2 article a .food .price, #section3 article a .food .price, #section4 article a .food .price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+#section2 article a .food .price p, #section3 article a .food .price p, #section4 article a .food .price p {
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 3%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+#section2 article a .food .price span, #section3 article a .food .price span, #section4 article a .food .price span {
+  margin-left: auto;
+  margin-right: 2.5%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+#section2 article a .checked, #section3 article a .checked, #section4 article a .checked {
+  background-color: #99E2D0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 0px 20px 20px 0px;
+  width: 0%;
+  text-align: center;
+  transition: width 0.5s;
+}
+#section2 article a .checked i, #section3 article a .checked i, #section4 article a .checked i {
+  color: white;
+  font-size: 0.9em;
+}
+#section2 article:hover .food, #section3 article:hover .food, #section4 article:hover .food {
+  width: 80%;
+}
+#section2 article:hover .checked, #section3 article:hover .checked, #section4 article:hover .checked {
+  width: 20%;
+}
+#section2 article:hover .checked i, #section3 article:hover .checked i, #section4 article:hover .checked i {
+  -webkit-animation: i_checked 0.5s 1 forwards;
+          animation: i_checked 0.5s 1 forwards;
+}
+#section2 .btn-menu, #section3 .btn-menu, #section4 .btn-menu {
+  margin: 20% auto;
+  width: 160px;
+}
+#section2 .btn-menu button, #section3 .btn-menu button, #section4 .btn-menu button {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+#section2 .m_1, #section3 .m_1, #section4 .m_1 {
+  -webkit-animation: menu_1 2s 1 forwards;
+          animation: menu_1 2s 1 forwards;
+}
+#section2 .m_2, #section3 .m_2, #section4 .m_2 {
+  -webkit-animation: menu_2 2.5s 1 forwards;
+          animation: menu_2 2.5s 1 forwards;
+}
+#section2 .m_3, #section3 .m_3, #section4 .m_3 {
+  -webkit-animation: menu_3 3s 1 forwards;
+          animation: menu_3 3s 1 forwards;
+}
+
+@media (min-width: 1024px) {
+  .blocpage #section3 {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 50%;
+    padding-right: 0;
+  }
+  .blocpage .m_2 {
+    width: 70%;
+  }
+}
+@-webkit-keyframes menu_1 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes menu_1 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes menu_2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes menu_2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes menu_3 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes menu_3 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes i_checked {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes i_checked {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}/*# sourceMappingURL=styles.css.map */

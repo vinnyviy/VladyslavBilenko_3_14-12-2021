@@ -1,0 +1,514 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+
+
+@mixin shadow {
+    box-shadow: 5px 5px 10px #d4d4d4;
+}
+
+
+
+
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+
+    a {
+        
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  
+}
+
+header {
+    font-family: "Shrikhand", sans-serif;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
+    padding: 0.1rem;
+    margin: 0;
+    position: relative;
+    
+  }
+
+
+
+.ville {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #e4e2e2;
+    text-align: center;
+    padding: 0.5rem;
+    & i {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  
+.explorer {
+    background-color: #f6f6f6;
+    padding: 12px 0 70px 0;
+    text-align: center;
+    p {
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+    }
+}  
+
+button {
+    border-radius: 30px;
+    padding: 17px;
+    border: none;
+    background: linear-gradient( $secondary-color, $primary-color );
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    @include shadow;
+    transition: opacity 250ms;
+    &:hover {
+        box-shadow: 5px 5px 10px #8f8d8d;
+        opacity: 0.80;
+    }
+}
+
+#section_fonctionnement {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-bottom: 10%;
+    
+    h2 {
+      padding: 20px 0 5px 2px;
+      
+  @media screen and (min-width:1024px)  {
+      text-align: center;  
+      padding: 20px 0 5px 0;  
+   }
+  }
+    div {
+        margin-left: 3%;
+        @media (min-width: 1024px) {
+          display: flex;
+          justify-content: space-between;
+          p {
+              width: 30%;
+          }
+      }
+        p {
+            border-radius: 20px;
+            background-color: #f6f6f6;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-weight: bold;
+            @include shadow;
+            transition: background-color 0.5s;
+            &:hover {
+                background-color: rgba(147,86,220,0.1);
+                i {
+                    color: $primary-color;
+                }
+            }
+            .number {
+                border-radius: 50px;
+                padding: 5px 10px 5px 10px;
+                background-color: $primary-color;
+                color: white;
+                margin-left: -10px;
+                margin-right: 10px;
+            }
+            i {
+                margin-right: 2%;
+                color: #747474;
+                transition: color 0.5s;
+            }
+            #mobile {
+                margin-right: 0.1rem;
+            }
+        }
+    }
+}
+
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+  &__h2 {
+      padding: 40px 0 0 20px;
+  @media screen and(min-width: 1024px) {
+      width: 100%;
+      text-align: center;
+      padding: 40px 0 0 0;
+      }
+  }
+  article {
+      border-radius: 20px;
+      background-color: white;
+      margin: 15px;
+      @include shadow;
+      position: relative;
+  }
+  article img {
+      max-height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+  }  
+  a {
+      color: black;
+  }   
+  }
+  @media screen and (min-width: 1024px) {
+      .restaurants {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }  
+      article {
+          width: 40%;
+      }  
+  }
+
+
+.restaurants__titre {
+  h4 {
+      margin: 0;
+      padding: 10px 0 2px 12px;
+  }
+  p {
+      margin: 0;
+      padding: 0 0 10px 12px;
+  }
+}
+
+.restaurants__nouveau {
+  position: absolute;
+  background-color: $tertiary-color;
+  color: #0a8d6d;
+  top: 15px;
+  right: 10px;
+  height: 30px;
+  width: 80px;
+  border-radius: 2px;
+  p {
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px;
+      font-size: 0.9rem;
+  }
+}
+
+.restaurants__coeur {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 20px;
+  bottom: 20px;
+}
+  
+.fill {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.4s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient($secondary-color, $primary-color);
+      background:-webkit-linear-gradient($secondary-color, $primary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+    }
+}
+
+@keyframes fill {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+footer {
+    background-color: #353535;
+    padding: 25px;
+    color: white;
+  }
+    h5 {
+      font-family: "Shrikhand", "sans-serif";
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-left: 40px;
+    }
+    ul {
+      list-style-type: none;
+  
+      li {
+        padding: 5px 0 5px 0;
+  
+        a {
+          color: white;
+        }
+      }
+    }
+  
+      .fa-utensils {
+        margin-right: 12px;
+      }
+      .fa-hands-helping {
+        margin-right: 5px;
+}
+
+
+.menu__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  left: 20px;
+}
+
+#section1 {
+  position: relative;
+  img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+  }
+  div {
+      width: 86%;
+      display: flex;
+      align-items: center;
+      padding-left: 7%;
+      padding-right: 7%;
+      background-color: #f6f6f6;
+      border-radius: 20px 20px 0px 0px;
+      margin-top: -30px;
+      position: absolute;
+      top: 260px;
+      justify-content: space-between;
+      
+
+  }
+  h2 {
+  
+      font-family: "Shrikhand", sans-serif;
+      
+      
+  }  
+  
+}
+
+
+
+#section2, #section3, #section4 {
+  background-color: #f6f6f6;
+  margin-top: -20px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 10px;
+
+  
+ 
+  h3 {
+      font-weight: normal;
+      border-bottom: 3px solid $tertiary-color;
+      width: 3rem;
+      padding-top: 10px;
+      color: black;
+  }
+  article {
+      background-color: white;
+      border-radius: 20px;
+      padding-left: 2.5%;
+      margin-bottom: 15px;
+      @include shadow;
+      overflow-x: hidden;
+      a {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          .food {
+              width: 100%;
+              transition: width 0.5s;
+              h4 {
+                  font-size: 0.9em;
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+              }
+              .price {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  color: black;
+                  p {
+                      font-size: 0.9em;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      padding-right: 3%;
+                      margin-top: 0px;
+                      margin-bottom: 10px;
+                  }
+                  span {
+                      margin-left: auto;
+                      margin-right: 2.5%;
+                      margin-bottom: 10px;
+                      font-weight: bold;
+                      font-size: 0.9em;
+                  }
+              }
+          }
+          .checked {
+              background-color: $tertiary-color;
+              padding-top: 24px;
+              padding-bottom: 24px;
+              border-radius: 0px 20px 20px 0px;
+              width: 0%;
+              text-align: center;
+              transition: width 0.5s;
+              i {
+                  color: white;
+                  font-size: 0.9em; 
+              }
+          }
+      }
+      &:hover {
+          .food {
+              width: 80%;
+          }
+          .checked {
+              width: 20%;
+              i {
+                  animation: i_checked 0.5s 1 forwards;
+
+              }
+          }
+      }
+   
+  }
+
+.btn-menu {
+    margin: 20% auto;
+    width: 160px; 
+  button{
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+   
+}  
+  
+.m_1 {
+      animation: menu_1 2s 1 forwards;
+  }
+  
+.m_2 {
+      animation: menu_2 2.5s 1 forwards;
+  }
+.m_3 {
+      animation: menu_3 3s 1 forwards;
+  }
+}
+
+
+
+
+@media (min-width: 1024px) {
+  
+
+  .blocpage {
+     
+    #section3 {
+      box-sizing: border-box;
+      width: 100%; 
+      padding-left: 50%;
+      padding-right: 0;
+    
+    }
+    .m_2{
+      
+      width: 70%;
+    }
+    
+    
+}
+}
+
+
+@keyframes menu_1 {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes menu_2 {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  25% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes menu_3 {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  35% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes i_checked {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(-90deg);
+  }
+  50% {
+      transform: rotate(-180deg);
+  }
+  75% {
+      transform: rotate(-270deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
