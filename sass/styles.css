@@ -47,6 +47,7 @@ header {
 }
 
 button {
+  cursor: pointer;
   border-radius: 30px;
   padding: 17px;
   border: none;
@@ -410,6 +411,13 @@ ul li a {
 }
 
 @media (min-width: 1024px) {
+  #section1 div {
+    margin-top: 170px;
+  }
+  #section1 img {
+    height: 500px;
+  }
+
   .blocpage #section3 {
     box-sizing: border-box;
     width: 100%;

@@ -68,6 +68,7 @@ header {
 }  
 
 button {
+    cursor: pointer;
     border-radius: 30px;
     padding: 17px;
     border: none;
@@ -435,7 +436,19 @@ footer {
 
 
 @media (min-width: 1024px) {
-  
+  #section1 {
+
+    div {
+      
+      margin-top:170px;
+      
+      }
+    img {
+        
+        height:500px;
+    }
+    } 
+    
 
   .blocpage {
      
@@ -450,6 +463,7 @@ footer {
       
       width: 70%;
     }
+    
     
     
 }
